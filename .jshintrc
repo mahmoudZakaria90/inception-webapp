@@ -1,0 +1,20 @@
+{
+	"browserify": true,
+	"predef": ["angular", "confirm", "alert"],
+	"curly": true,
+	"eqeqeq": true,
+	"noarg": true,
+	"nonew": true,
+	"undef": true,
+	"unused": true,
+	"eqnull": true,
+	"strict": true,
+	"expr": true,
+	"latedef": "nofunc",
+	"quotmark": "single",
+	"validthis": true,
+	"indent": 2,
+	"node": true,
+	"browser": true,
+	"esnext": true
+}
