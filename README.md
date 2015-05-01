@@ -15,3 +15,16 @@ Upcoming tasks for production builds:
 
 * JavaScript Uglification
 * CSS minification
+
+### TL;DR
+
+Install node dependencies
+
+```shell
+$ npm install
+```
+
+Run gulp (default task)
+```shell
+$ gulp
+```
