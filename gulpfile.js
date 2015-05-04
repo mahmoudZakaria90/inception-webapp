@@ -14,6 +14,7 @@ var	stylish 				= require('jshint-stylish')
 var	historyApiFallback 		= require('connect-history-api-fallback')
 var notify					= require('gulp-notify')
 var babel					= require('babelify')
+var coffee					= require('gulp-coffee')
 
 // 
 // Browserfy bundle
@@ -53,6 +54,21 @@ gulp.task('scripts', function() {
 	}
 })
 
+// 
+// Compiles CofeeScript
+// 
+
+gulp.task('coffee', function(){
+	gulp.src('./src/coffee/**/*.coffee')
+	.pipe(coffee({bare: true}))
+	.on("error", notify.onError({
+		title: 'CoffeeScript Error',
+		message: "<%= error.message %>",
+		sound: 'Basso'
+	}))
+	.pipe(gulp.dest('./src/js'))
+})
+
 //
 // JSHint
 //
@@ -82,6 +98,7 @@ gulp.task('sass', function() {
 
 gulp.task('watch', function() {
 	gulp.watch('src/js/**/*.js', ['jshint'])
+	gulp.watch('src/coffee/**/*.coffee', ['coffee'])
 	gulp.watch('src/styles/*', ['sass'])
 })
 
