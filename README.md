@@ -11,7 +11,7 @@ Gulp tasks:
 * JS Error notifications (Mac only)
 * Localhost setup using autoconnect with optional HTML5 History Api Fallback (for single page web apps)
 
-Upcoming tasks for production builds:
+Tasks for production builds:
 
 * JavaScript Uglification
 * CSS minification
@@ -27,4 +27,9 @@ $ npm install
 Run gulp (default task)
 ```shell
 $ gulp
+```
+
+Minifies JS and CSS
+```shell
+$ gulp build
 ```
