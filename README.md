@@ -6,6 +6,7 @@ A general structure for web applications with no specific JS framework.
 Gulp tasks:
 * Bundles JS using Browserify, supporting ES6 syntax (using babelify)
 * Compiles Sass
+* Compiles CoffeeScript
 * Autoprefixes CSS
 * JSHint
 * JS Error notifications (Mac only)
