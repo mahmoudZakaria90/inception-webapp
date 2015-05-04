@@ -106,12 +106,24 @@ gulp.task('connect', function () {
 gulp.task('default', ['connect', 'sass', 'scripts', 'watch'])
 
 // 
-// TODO: Build tasks
+// Build tasks
 // 
 
+gulp.task('build', function() {
+	sequence(['minifyCSS', 'uglifyJS'])
+})
 
+gulp.task('minifyCSS', function() {
+	gulp.src('./public/styles/screen.css')
+		.pipe(minifyCSS())
+		.pipe(gulp.dest('./public/styles'));
+})
 
-
+gulp.task('uglifyJS', function() {
+	gulp.src('./public/scripts/main.js')
+	.pipe(uglify())
+	.pipe(gulp.dest('./public/scripts'));
+})
 
 
 
